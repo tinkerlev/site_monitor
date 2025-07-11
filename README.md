@@ -5,13 +5,15 @@ Designed for websites hosted on **WordPress** and protected by **Cloudflare**, w
 
 ---
 <div align="center">
-![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![SMTP](https://img.shields.io/badge/SMTP-Email-ff69b4?style=for-the-badge)
-![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
-![Windows Task Scheduler](https://img.shields.io/badge/Windows-Task_Scheduler-blue?style=for-the-badge)
-![Requests](https://img.shields.io/badge/Requests-HTTP_Client-blue?style=for-the-badge)
-![Logging](https://img.shields.io/badge/Logging-Built_in-orange?style=for-the-badge)
-![dotenv](https://img.shields.io/badge/Dotenv-Config-green?style=for-the-badge)
+
+<img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" />
+<img src="https://img.shields.io/badge/SMTP-Email-ff69b4?style=for-the-badge" />
+<img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white" />
+<img src="https://img.shields.io/badge/Windows-Task_Scheduler-blue?style=for-the-badge" />
+<img src="https://img.shields.io/badge/Requests-HTTP_Client-blue?style=for-the-badge" />
+<img src="https://img.shields.io/badge/Logging-Built_in-orange?style=for-the-badge" />
+<img src="https://img.shields.io/badge/Dotenv-Config-green?style=for-the-badge" />
+
 </div>
 
 
