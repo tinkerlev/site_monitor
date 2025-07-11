@@ -54,7 +54,7 @@ requests==2.31.0
 ### 1. Clone the repo:
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/site-monitor.git
+git clone https://github.com/tinkerlev/site-monitor.git
 cd site-monitor
 ```
 
