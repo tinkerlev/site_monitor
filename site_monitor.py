@@ -1,3 +1,5 @@
+from dotenv import load_dotenv
+import os
 import requests
 import time
 from datetime import datetime
@@ -9,14 +11,21 @@ SITE_URL = "https://www.example.com"
 CHECK_INTERVAL = 60
 LOG_FILE = "uptime.log"
 
+load_dotenv()
 # Email configuration
-EMAIL_FROM = "your_alert_email@gmail.com"
-EMAIL_TO = "you@example.com"
-EMAIL_SUBJECT = "Site Down Alert!!!"
-SMTP_SERVER = "smtp.gmail.com"
-SMTP_PORT = 587
-SMTP_USER = "your_alert_email@gmail.com"
-SMTP_PASS = "your_app_password"
+SITE_URL = os.getenv("SITE_URL")
+CHECK_INTERVAL = int(os.getenv("CHECK_INTERVAL", 60))
+EMAIL_FROM = os.getenv("EMAIL_FROM")
+EMAIL_TO = os.getenv("EMAIL_TO")
+EMAIL_SUBJECT = "⚠️ Site Down Alert"
+SMTP_SERVER = os.getenv("SMTP_SERVER", "smtp.gmail.com")
+SMTP_PORT = int(os.getenv("SMTP_PORT", 587))
+SMTP_USER = os.getenv("SMTP_USER")
+SMTP_PASS = os.getenv("SMTP_PASS")
+
+required_vars = [SITE_URL, EMAIL_FROM, EMAIL_TO, SMTP_USER, SMTP_PASS]
+if not all(required_vars):
+    raise EnvironmentError("[!] One or more required environment variables are missing. Check your .env file.")
 
 def send_email_alert(message: str) -> None:
     """Send an email alert with the provided message."""
@@ -41,6 +50,7 @@ def log_event(entry: str) -> None:
 
 def monitor_site() -> None:
     """Continuously monitor the site and log status changes."""
+    log_event("=== Monitor script started ===")
     print(f"[+] Monitoring {SITE_URL} every {CHECK_INTERVAL} seconds...")
     was_down = False
 
